@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>AgentFlightRecorder.Adapters.SemanticKernel</PackageId>
+    <Description>Semantic Kernel adapter for AgentFlightRecorder.NET — bridges IChatCompletionService and auto-function-calling into deterministic recording and replay.</Description>
+    <NoWarn>$(NoWarn);SKEXP0001</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Adapters.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AgentFlightRecorder.Core\AgentFlightRecorder.Core.csproj" />
+    <ProjectReference Include="..\AgentFlightRecorder.Replay\AgentFlightRecorder.Replay.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.72.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

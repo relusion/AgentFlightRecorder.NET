@@ -1,0 +1,32 @@
+## .NET
+bin/
+obj/
+*.nupkg
+*.snupkg
+
+## IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.DotSettings.user
+
+## Build
+artifacts/
+TestResults/
+*.log
+
+## Secrets & certificates
+.env
+.env.*
+*.pfx
+*.key
+*.pem
+
+## Claude Code
+.claude/
+
+## OS
+.DS_Store
+Thumbs.db

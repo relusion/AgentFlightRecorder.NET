@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+    <NoWarn>$(NoWarn);SKEXP0001</NoWarn>
+    <UserSecretsId>azure-openai-sample</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AgentFlightRecorder.Core\AgentFlightRecorder.Core.csproj" />
+    <ProjectReference Include="..\..\src\AgentFlightRecorder.Adapters.SemanticKernel\AgentFlightRecorder.Adapters.SemanticKernel.csproj" />
+    <ProjectReference Include="..\..\src\AgentFlightRecorder.Sinks.Jsonl\AgentFlightRecorder.Sinks.Jsonl.csproj" />
+    <ProjectReference Include="..\..\src\AgentFlightRecorder.Replay\AgentFlightRecorder.Replay.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.72.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

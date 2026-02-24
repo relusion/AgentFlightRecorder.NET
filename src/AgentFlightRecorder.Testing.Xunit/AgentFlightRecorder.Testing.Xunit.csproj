@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>AgentFlightRecorder.Testing.Xunit</PackageId>
+    <Description>xUnit test helpers, assertions, and fixtures for AgentFlightRecorder.NET.</Description>
+    <IsPackable>true</IsPackable>
+    <IsTestProject>false</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AgentFlightRecorder.Core\AgentFlightRecorder.Core.csproj" />
+    <ProjectReference Include="..\AgentFlightRecorder.Replay\AgentFlightRecorder.Replay.csproj" />
+    <ProjectReference Include="..\AgentFlightRecorder.Sinks.Jsonl\AgentFlightRecorder.Sinks.Jsonl.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.core" Version="2.9.3" />
+    <PackageReference Include="xunit.assert" Version="2.9.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

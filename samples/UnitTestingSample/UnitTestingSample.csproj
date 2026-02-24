@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsTestProject>true</IsTestProject>
+    <!-- Consumers would use PackageReference to NuGet packages instead of ProjectReference -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AgentFlightRecorder.Core\AgentFlightRecorder.Core.csproj" />
+    <ProjectReference Include="..\..\src\AgentFlightRecorder.Replay\AgentFlightRecorder.Replay.csproj" />
+    <ProjectReference Include="..\..\src\AgentFlightRecorder.Sinks.Jsonl\AgentFlightRecorder.Sinks.Jsonl.csproj" />
+    <ProjectReference Include="..\..\src\AgentFlightRecorder.Testing.Xunit\AgentFlightRecorder.Testing.Xunit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="TestData\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
